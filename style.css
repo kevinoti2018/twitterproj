@@ -83,7 +83,7 @@
 
 
 .container .profile-card .top .image-container{
-    background-image: url('./background.png');
+    background-image: url('./back1.avif');
     background-size:cover;
     background-position:center;
     object-fit:cover;
@@ -238,8 +238,9 @@
     gap: 0.5rem;
     padding:.5rem;
     background: var(--background);
+    width: 45rem;
     /* margin-top: -2.4rem; */
-
+ 
 }
 .container .profile-container .verified .tops{
     color:var(--paragraph)
@@ -257,11 +258,16 @@
 
 .container .profile-container .verified .person .right{
     display:flex;
-    flex-direction:column;
+    /* flex-direction:column; */
+    width: 16rem;
     gap:.3rem;
     color:white
+}
+.container .profile-container .verified .person .right p{
+    color:var(--paragraph)
 }
 .container .profile-container .verified .verify-below{
     margin-left: 3.5rem;
     color:white;
+    line-height:1.3rem
 }

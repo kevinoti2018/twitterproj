@@ -24,7 +24,7 @@ const fetchUser = async()=>{
 
             <div class="mid">
                 <div class="left">
-                    <img src="./person.png" alt="profile"/>
+                    <img src="./persons.avif" alt="profile"/>
                 </div>
                 <div class ="right">
                     <span class="icon">  <ion-icon name="ellipsis-horizontal"></ion-icon> </span>
@@ -40,12 +40,12 @@ const fetchUser = async()=>{
                 </div>
                 <div class="bottom-details">
                     <div class="bottom-details-top">
-                        Lead Dev Rel <span class="blue">@${data.email}</span> Created <span class="blue">@${data.company.name}</span>| npx create-web3-dapp| Developing: Pot🍊| Helping devs break into web3
+                    ${data.website} <span class="blue">@${data.email}</span> Created <span class="blue">@${data.company.name}</span>| ${data.company.catchPhrase}| ${data.company.bs}🍊| ${data.phone}
                     </div>
                     <div class="bottom-details-bottom">
-                        <p><span><ion-icon name="briefcase-outline"></ion-icon></span>Science and Technology <span><ion-icon name="alert-circle-outline"></ion-icon></span></p>
-                        <p><span><ion-icon name="location-outline"></ion-icon></span>Ethereum </p>
-                        <p><span><ion-icon name="link-outline"></ion-icon></span><span class="blue">vito.cc</span></p>
+                        <p><span><ion-icon name="briefcase-outline"></ion-icon></span>${data.address.street} <span><ion-icon name="alert-circle-outline"></ion-icon></span></p>
+                        <p><span><ion-icon name="location-outline"></ion-icon></span> ${data.address.city} </p>
+                        <p><span><ion-icon name="link-outline"></ion-icon></span><span class="blue">${data.website}</span></p>
                         <p><span><ion-icon name="calendar-outline"></ion-icon></span>joined August 2020</p>
                     </div>
                     
@@ -89,13 +89,13 @@ const fetchPosts = async()=>{
         verified.innerHTML= `
         <p class="tops"> <span class="icon"><ion-icon name="pin-outline"></ion-icon></span> Pinned Tweet</p>
          <div class="person">
-            <div class="left"><img src="./person.png " alt="person"/> </div>
-            <div class="right"> <h3>Vitto Rivabela</h3> <p>@Vitostock . Mar 31</p></div>
+            <div class="left"><img src="./persons.avif " alt="person"/> </div>
+            <div class="right"> <h3>Leanne Graham</h3> <p>@Bret . Mar 31</p></div>
            
         </div>
         <div class="verify-below">
-            <p>We're officially Alchemy verified!</p>
-            <p>One blue checkmark wasnt enough</p>
+            <p> ${data.title}</p>
+            <p>${data.body}</p>
         </div>`
         
     }
