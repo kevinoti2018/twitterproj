@@ -1,0 +1,267 @@
+
+:root{
+    --button:rgb(15,20,25);
+    --blue:rgb(29,155,240);
+    --paragraph:rgb(103,118,130);
+    --number:rgb(59,63,67);
+    --background:rgb(21,31,43);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    
+    width: 100%;
+    height:100vh;
+    display:flex;
+    padding : .6rem;
+    justify-content: center;
+    align-items: start;
+    
+}
+
+.container .profile-card{
+    /* margin-top: 3rem; */
+    /* height:100vh; */
+    background: var(--background);
+    width: 45rem;
+    display:flex;
+    flex-direction:column;
+    gap: 2rem;
+    
+}
+.container .profile-card .top{
+    display: flex;
+    flex-direction:column;
+    height: 18rem;
+    /* background: blue; */
+}
+
+.container .profile-card .top .top-content{
+    display:flex;
+    /* flex-direction:column; */
+    /* background: blue; */
+    gap: .2rem;
+    width: 19rem;
+    justify-content: space-between;
+    align-items:center;
+    padding: .5rem;
+}
+.container .profile-card .top .top-content .left{
+    color:white;
+    font-size: 1.2rem
+}
+
+.container .profile-card .top .top-content .right{
+    display: flex;
+    flex-direction:column;
+    gap: .2rem
+}
+
+.container .profile-card .top .top-content .right h1,.container .profile-card .bottom .bottom-head h1{
+    font-weight: 500;
+    color:white;
+    width: 16rem;
+    /* background-color: red; */
+}
+.container .profile-card .top .top-content .right .tweets{
+    color: var(--paragraph);
+    font-weight: 400;
+    font-size: 1rem;
+    margin-left: -7.6rem;
+}
+.container .profile-card .bottom .bottom-head p{
+    color: var(--paragraph);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+
+.container .profile-card .top .image-container{
+    background-image: url('./background.png');
+    background-size:cover;
+    background-position:center;
+    object-fit:cover;
+    background-repeat:no-repeat;
+    height: 19rem;
+}
+
+.container .profile-card .mid{
+    /* background:red; */
+    height: 4rem;
+    display:flex;
+    justify-content:space-between;
+    padding: .9rem;
+}
+
+.container .profile-card .mid .left img{
+    width:10rem;
+    height:10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    top: -9vh;
+    cursor:pointer;
+}
+.container .profile-card .mid .right{
+    /* font-size: 1.2rem; */
+    display:flex;
+    gap: .9rem;
+    margin-top: -1.6rem;
+    width: 19rem
+}
+
+.container .profile-card .mid .right .icon{
+    padding: 0.5rem;
+    border:1px solid white;
+    width: 3rem;
+    height: 3rem;
+    color:white;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+}
+
+.container .profile-card .mid .right button{
+    padding: .5rem;
+    height: 3rem;
+    width: 8rem;
+    background:none;
+    outline :none;
+    border: 1px solid white;
+    border-radius:1.5rem;
+    font-weight:700;
+    font-size: 1.2rem;
+    color:white;
+    cursor:pointer;
+    /* padding  .4rem; */
+}
+.container .profile-card .bottom{
+    padding:.5rem;
+    display:flex;
+    flex-direction:column;
+    gap:.5rem;
+    /* background:blue; */
+}
+.container .profile-card .bottom .bottom-details .bottom-details-top{
+    font-size: 1.3rem;
+    color:white;
+    font-weight:300;
+}
+.container .profile-card .bottom .bottom-details .bottom-details-top .blue,.container .profile-card .bottom .bottom-details .bottom-details-bottom p .blue{
+    color: var(--blue);
+    line-height:1.2rem;
+    cursor:pointer;
+}
+.container .profile-card .bottom .bottom-details .bottom-details-top .blue:hover,.container .profile-card .bottom .bottom-details .bottom-details-bottom p .blue:hover{
+    border-bottom: 1px solid rgb(29,155,240) ;
+}
+.container .profile-card .bottom .bottom-details .bottom-details-bottom{
+    font-size: 1.3rem;
+    margin-top:1.2rem;
+    color:var(--paragraph);
+    width:41rem;
+    display:flex;
+    flex-wrap:wrap;
+    gap: .2rem;
+    /* background:blue; */
+    padding:1rem;
+    line-height:1.2rem;
+}
+.container .profile-card .below{
+    display:flex;
+    flex-direction:column;
+    gap:.5rem;
+}
+.container .profile-card .below .follows{
+    display:flex;
+    gap: .8rem;
+   
+    font-size: 1.2rem;
+    color:var(--paragraph)
+}
+.container .profile-card .below .follows .text{
+    color: white;
+    padding:.4rem;
+}
+.container .profile-card .below .followers{
+    display:flex;
+}
+
+.container .profile-card .below .followers .followedby img{
+    width: 2rem;
+    height:2rem;
+    object-fit:cover;
+    border-radius:50%;
+}
+
+.container .profile-card .below .followers .followedby .person1{
+    position:relative;
+    right:-2rem;
+}
+.container .profile-card .below .followers .followedby .person2{
+    position:relative;
+    right:1rem
+}
+.container .profile-card .below .followers{
+    color: var(--paragraph);
+    font-size:1.2rem;
+    margin-top:.5rem;
+}
+.container .profile-card .tweets{
+    display:flex;
+    justify-content:space-evenly;
+    padding:.8rem
+}
+.container .profile-card .tweets p{
+    font-size:1.2rem;
+    color:var(--paragraph);
+    
+}
+
+.container .profile-card .tweets .active{
+    border-bottom: 4px solid rgb(29,155,240);
+    padding: 0 0 .5rem 0;
+}
+
+.container .profile-container .verified{
+    display:flex;
+    flex-direction:column;
+    gap: 0.5rem;
+    padding:.5rem;
+    background: var(--background);
+    /* margin-top: -2.4rem; */
+
+}
+.container .profile-container .verified .tops{
+    color:var(--paragraph)
+}
+.container .profile-container .verified .person{
+    display:flex;
+    gap:.5rem;
+}
+.container .profile-container .verified .person .left img{
+    width:3rem;
+    height: 3rem;
+    object-fit:cover;
+    border-radius: 50%;
+}
+
+.container .profile-container .verified .person .right{
+    display:flex;
+    flex-direction:column;
+    gap:.3rem;
+    color:white
+}
+.container .profile-container .verified .verify-below{
+    margin-left: 3.5rem;
+    color:white;
+}
