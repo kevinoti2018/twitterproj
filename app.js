@@ -1,5 +1,5 @@
-const  profile_card = document.querySelector('.profile-card')
-const verified = document.querySelector('.verified')
+let  profile_card = document.querySelector('.profile-card')
+let verified = document.querySelector('.verified')
 //const profile_container = document.querySelector('profile-container')
 const fetchUser = async()=>{
     try{
@@ -72,8 +72,8 @@ const fetchUser = async()=>{
                 <p>Media</p>
                 <p>Likes</p>
             </div>`
-            // return profile_container.appendChild(profile_card)
-        // return profile_card
+            return profile_container.appendChild(profile_card)
+        return profile_card
     }   
     catch(err){
         console.log(err)
@@ -83,10 +83,11 @@ const fetchUser = async()=>{
 fetchUser()
 const fetchPosts = async()=>{
     try{
-        const response =  await fetch(' https://jsonplaceholder.typicode.com/posts/1')
+        const response =  await fetch(' https://jsonplaceholder.typicode.com/users/1/posts')
         const data = await response.json()
         console.log(data)
-        verified.innerHTML= `
+       return (verified.innerHTML= data.map(post=>{
+        return`<div >
         <p class="tops"> <span class="icon"><ion-icon name="pin-outline"></ion-icon></span> Pinned Tweet</p>
          <div class="person">
             <div class="left"><img src="./persons.avif " alt="person"/> </div>
@@ -94,10 +95,11 @@ const fetchPosts = async()=>{
            
         </div>
         <div class="verify-below">
-            <p> ${data.title}</p>
-            <p>${data.body}</p>
-        </div>`
-        
+            <p> ${post.title}</p>
+            <p>${post.body}</p>
+        </div></div>`
+        }).join(""))
+        console.log(verified)
     }
     catch(err){
         console.log(err)

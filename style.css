@@ -234,11 +234,16 @@
 
 .container .profile-container .verified{
     display:flex;
+   /* padding-left: 2rem; */
     flex-direction:column;
     gap: 0.5rem;
     padding:.5rem;
     background: var(--background);
     width: 45rem;
+    display:flex;
+    flex-direction:column;
+    gap:.7rem;
+    height:100rem;
     /* margin-top: -2.4rem; */
  
 }
@@ -253,7 +258,7 @@
     width:3rem;
     height: 3rem;
     object-fit:cover;
-    border-radius: 50%;
+    border-radius: 50%;         
 }
 
 .container .profile-container .verified .person .right{
